@@ -54,7 +54,7 @@ function generatePassword() {
   }
 
   
-//create random passwork from list of available characters
+//create random password from list of available characters
   var  randomPassword = "";
   for (var i=0; i < passwordLength; i++){
     randomPassword += masterList.charAt(Math.floor(Math.random()*masterList.length));
@@ -69,6 +69,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
+  //reset masterList of characters each time generate button is pressed
   masterList = "";
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
